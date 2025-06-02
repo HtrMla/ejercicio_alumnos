@@ -1,15 +1,28 @@
 import os, msvcrt
 
+
 menu = """MENÚ
 1. Agregar alumnos 
 2. Ver alumnos
 3. Salir"""
+alumnos=[]
 while True:
     os.system('cls')
     print(menu)
     opc=input("Ingrese una opcion: ")
     if opc=="1":
-        pass
+        print("AGREGAR ALUMNO")
+        codigo=input("Ingrese código: ")
+        edad=int(input("Ingrese edad: "))
+        nombre=input("Ingrese nombre: ")
+        alumno={
+            "codigo": codigo,
+            "nombre": nombre,
+            "edad": edad
+        }
+        alumnos.append(alumno)
+        print("Alumnos guardado con éxito!")
+
     elif opc=="2":
         pass
     elif opc=="3":
